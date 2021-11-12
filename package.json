@@ -1,0 +1,37 @@
+{
+  "name": "cached-observable",
+  "version": "0.0.1",
+  "description": "A simple utility to cache RxJS Observables in memory, session and local storage",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "author": {
+    "name": "Giancarlo Buomprisco",
+    "url": "giancarlobuomprisco.com"
+  },
+  "exports": {
+    "require": "./dist/index.js",
+    "import": "./dist/index.mjs"
+  },
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts-resolve",
+    "test": "jest",
+    "prepublishOnly": "npm run build"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "rxjs": ">7.1.0"
+  },
+  "devDependencies": {
+    "@sucrase/jest-plugin": "^2.2.0",
+    "@types/jest": "^27.0.2",
+    "jest": "^27.3.1",
+    "prettier": "^2.4.1",
+    "rxjs": "^7.4.0",
+    "tsup": "^5.6.0",
+    "typescript": "^4.4.4"
+  }
+}
