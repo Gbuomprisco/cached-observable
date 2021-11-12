@@ -1,6 +1,6 @@
 {
   "name": "cached-observable",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A simple utility to cache RxJS Observables in memory, session and local storage",
   "files": [
     "dist"
@@ -19,7 +19,8 @@
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts-resolve",
     "test": "jest",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "publish": "npm publish"
   },
   "license": "MIT",
   "peerDependencies": {

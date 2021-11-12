@@ -82,7 +82,10 @@ export function updateCacheEntry<Value>(
   return cache.set(key, newEntry);
 }
 
-function getExpiryTimeFromEntry(entry: CachePayload<unknown>, lastUpdated: number) {
+function getExpiryTimeFromEntry(
+  entry: CachePayload<unknown> | undefined,
+  lastUpdated: number
+) {
   return entry && entry.expiry ? lastUpdated + entry.expiry : undefined;
 }
 
